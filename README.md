@@ -30,3 +30,7 @@ Then enter commands such as `adduser alice`, `user alice`, `mkdir /docs`, `write
 - `cat <path>` or `read <path>`: output the file contents if readable by the current user.
 - `mv <src> <dest>` or `move <src> <dest>`: move/rename a file or directory; requires write perms on both source and destination parents and fails if the destination exists.
 - `exit` or `quit`: leave the CLI.
+
+## Methodology
+
+I decided to simulate a NFS. This program doesn't actually write any files, but instead stores them as a data object. This is done to handle user persmission for different users easier. Then I made a cli to easly debug and interface with the NFS simulation.
